@@ -19,7 +19,7 @@ exports.seed =  async function(knex, Promise) {
   // Deletes ALL existing entries
         // Inserts seed entries
       const fakeLocations = [];
-      const count = 10;
+      const count = 50;
       for(let i =0; i< count; i++){
         fakeLocations .push(createFakeLocations());
       }
