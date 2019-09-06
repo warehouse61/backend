@@ -1,8 +1,20 @@
 exports.up = function(knex) {
     return knex.schema.createTable('bids', bids => {
         bids.increments();
-        bids.bigInteger('userId').notNullable()
-        bids.bigInteger('lotId').notNullable()
+        bids.integer('userId')
+            .notNullable()
+            .unsigned()
+            .references('id')
+            .inTable('users')
+            .onDelete('CASCADE')
+            .onUpdate('CASCADE')
+        bids.integer('lotId')
+            .notNullable()
+            .unsigned()
+            .references('id')
+            .inTable('lots')
+            .onDelete('CASCADE')
+            .onUpdate('CASCADE')
         bids.decimal('bid').notNullable()
         bids.decimal('maxBid')
         bids.timestamps(true, true);

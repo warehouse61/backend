@@ -1,8 +1,17 @@
 exports.up = function(knex) {
     return knex.schema.createTable('auctions', auctions => {
         auctions.increments();
-        auctions.bigInteger('affiliateId').notNullable()
-        auctions.bigInteger('locationId').notNullable()
+        auctions.integer('affiliateId')
+                .notNullable()
+                .unsigned()
+                .references("id")
+                .inTable('affiliates')
+                
+        auctions.integer('locationId')
+                .notNullable()
+                .unsigned()
+                .references('id')
+                .inTable('locations')
         auctions.string('title', 255).notNullable()
         auctions.datetime('startDate')
         auctions.datetime('endDate')

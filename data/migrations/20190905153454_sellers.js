@@ -2,8 +2,20 @@
 exports.up = function(knex) {
     return knex.schema.createTable('sellers', sellers => {
         sellers.increments();
-        sellers.bigInteger('affiliateId').notNullable()
-        sellers.bigInteger('userId').notNullable()
+        sellers.integer('affiliateId')
+                .notNullable()
+                .unsigned()
+                .references('id')
+                .inTable('affiliates')
+                .onDelete('CASCADE')
+                .onUpdate('CASCADE')
+        sellers.integer('userId')
+                .notNullable()
+                .unsigned()
+                .references('id')
+                .inTable('users')
+                .onDelete('CASCADE')
+                .onUpdate('CASCADE')
         sellers.timestamps(true, true);
         
     })

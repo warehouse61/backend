@@ -14,7 +14,8 @@ exports.up = function(knex) {
         affiliates.string('phone3', 20)
         affiliates.string('phone3Type', 20)
         affiliates.string('phone3Ext', 20)
-        affiliates.string('fax', 20)
+        affiliates.string('fax', 20),
+        affiliates.binary('image'),
         affiliates.timestamps(true, true);
         
     })

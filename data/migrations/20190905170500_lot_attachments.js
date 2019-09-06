@@ -4,7 +4,13 @@ exports.up = function(knex) {
         lot_attachments.binary('attachment').notNullable()
         lot_attachments.string('name')
         lot_attachments.string('type').notNullable()
-        lot_attachments.bigInteger('lotId').notNullable()
+        lot_attachments.integer('lotId')
+                            .notNullable()
+                            .unsigned()
+                            .references('id')
+                            .inTable('lots')
+                            .onDelete('CASCADE')
+                            .onUpdate('CASCADE')
         lot_attachments.timestamps(true, true);
         
     })

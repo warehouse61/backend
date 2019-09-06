@@ -2,8 +2,20 @@
 exports.up = function(knex) {
     return knex.schema.createTable('auction_watchlist', auction_watchlist => {
         auction_watchlist.increments();
-        auction_watchlist.bigInteger('auctionId').notNullable()
-        auction_watchlist.bigInteger('userId').notNullable()
+        auction_watchlist.integer('auctionId')
+                            .notNullable()
+                            .unsigned()
+                            .references('id')
+                            .inTable('affiliates')
+                            .onDelete('CASCADE')
+                            .onUpdate('CASCADE')
+        auction_watchlist.integer('userId')
+                            .notNullable()
+                            .unsigned()
+                            .references('id')
+                            .inTable('users')
+                            .onDelete('CASCADE')
+                            .onUpdate('CASCADE')
         auction_watchlist.timestamps(true, true);
         
     })

@@ -22,7 +22,8 @@ exports.up = function(knex) {
       users.string('phone3', 20)
       users.string('phone3Type', 20)
       users.string('phone3Ext', 20)
-      users.string('fax', 20)
+      users.string('fax', 20), 
+      users.binary('image'),
       users.timestamps(true, true);
       
   })
