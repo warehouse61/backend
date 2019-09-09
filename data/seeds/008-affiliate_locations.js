@@ -21,7 +21,7 @@ exports.seed = function(knex) {
         {affiliateId: 7, locationId: 15},
         {affiliateId: 8, locationId: 16},
         {affiliateId: 9, locationId: 17},
-        {affiliateId: 10, locationId: 18}
+        {affiliateId: 10, locationId: 18},
         {affiliateId: 1, locationId: 19},
         {affiliateId: 1, locationId: 20},
         {affiliateId: 2, locationId: 21},
@@ -60,3 +60,4 @@ exports.seed = function(knex) {
         
 
       ]);
+    }

@@ -3,18 +3,18 @@
 
 exports.up = function(knex) {
     return knex.schema.createTable('lot_watchlist', lot_watchlist => {
-        lot_watchlist.increments();
+        lot_watchlist.increments('lot_watchlistId');
         lot_watchlist.integer('userId')
                     .notNullable()
                     .unsigned()
-                    .references('id')
+                    .references('userId')
                     .inTable('users')
                     .onDelete('CASCADE')
                     .onUpdate('CASCADE')
 
         lot_watchlist.integer('lotId')
                     .notNullable()
-                    .unsigned()
+                    .unsigned('lotId')
                     .references('id')
                     .inTable('lots')
                     .onDelete('CASCADE')

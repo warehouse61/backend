@@ -5,10 +5,13 @@ const createFakeLocations = () => ({
   address1: faker.address.streetAddress(),
   address2: faker.address.secondaryAddress(),
   city: faker.address.city(),
-  phone: faker.phoneNumber.phoneNumber(), 
+  state: 'OH',
+  zip: faker.address.zipCode(), 
+  country: 'US',
+  phone: faker.phone.phoneNumberFormat(), 
   phoneType: "work", 
   phoneExt: "123",
-  fax: faker.phoneNumber.phoneNumber()
+  fax: faker.phone.phoneNumberFormat()
   
 
 

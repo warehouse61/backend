@@ -4,7 +4,7 @@ exports.seed = function(knex) {
 
       // Inserts seed entries
       return knex('sellers').insert([
-        {affiliateId: 1, userId: 1},
+        { affiliateId: 1, userId: 1 },
         {affiliateId: 1, userId: 2},
         {affiliateId: 2, userId: 3},
         {affiliateId: 2, userId: 4},
@@ -29,18 +29,18 @@ exports.seed = function(knex) {
         {affiliateId: 3, userId: 37},
         {affiliateId: 3, userId: 41},
         {affiliateId: 4, userId: 43},
-        {affiliateId: 5, userId: 44}
-        {affiliateId: 6, userId: 47}
-        {affiliateId: 6, userId: 50}
-        {affiliateId: 6, userId: 51}
-        {affiliateId: 7, userId: 52}
-        {affiliateId: 7, userId: 53}
-        {affiliateId: 8, userId: 54}
-        {affiliateId: 8, userId: 55}
-        {affiliateId: 8, userId: 56}
-        {affiliateId: 9, userId: 57}
-        {affiliateId: 10, userId: 58}
-        {affiliateId: 10, userId: 59}
+        {affiliateId: 5, userId: 44},
+        {affiliateId: 6, userId: 47},
+        {affiliateId: 6, userId: 50},
+        {affiliateId: 6, userId: 51},
+        {affiliateId: 7, userId: 52},
+        {affiliateId: 7, userId: 53},
+        {affiliateId: 8, userId: 54},
+        {affiliateId: 8, userId: 55},
+        {affiliateId: 8, userId: 56},
+        {affiliateId: 9, userId: 57},
+        {affiliateId: 10, userId: 58},
+        {affiliateId: 10, userId: 59},
         {affiliateId: 10, userId: 60}
       ]);
     

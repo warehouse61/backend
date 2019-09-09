@@ -4,14 +4,14 @@ const createFakeAffiliate = () => ({
   name: faker.company.companyName(),
   website: faker.internet.domainName(),
   description: faker.company.catchPhrase(),
-  phone: faker.phoneNumber.phoneNumber(), 
+  phone: faker.phone.phoneNumberFormat(), 
   phoneType: "cell", 
-  phone2: faker.phoneNumber.phoneNumber(), 
+  phone2: faker.phone.phoneNumberFormat(), 
   phone2Type: "home", 
-  phone3: faker.phoneNumber.phoneNumber(), 
+  phone3: faker.phone.phoneNumberFormat(), 
   phone3Type: "work", 
   phone3Ext: "123",
-  fax: faker.phoneNumber.phoneNumber(), 
+  fax: faker.phone.phoneNumberFormat(), 
   image: faker.image.business()
   
 

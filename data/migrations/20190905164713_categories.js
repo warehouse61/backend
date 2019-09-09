@@ -1,7 +1,7 @@
 
 exports.up = function(knex) {
     return knex.schema.createTable('categories', categories => {
-        categories.increments();
+        categories.increments('categoryId');
         categories.string('category')
         categories.timestamps(true, true);
         

@@ -2,18 +2,18 @@
 
 exports.up = function(knex) {
     return knex.schema.createTable('lots', lots => {
-        lots.increments();
+        lots.increments('lotId');
         lots.integer('auctionId')
             .notNullable()
             .unsigned()
-            .references('id')
+            .references('auctionId')
             .inTable('auctions')
             .onDelete('CASCADE')
             .onUpdate('CASCADE')
         lots.integer('categoryId').notNullable()
             .notNullable()
             .unsigned()
-            .references('id')
+            .references('categoryId')
             .inTable('categories')
         lots.integer('locationId')
             .notNullable()

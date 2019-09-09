@@ -8,17 +8,16 @@ const createFakeUser = () => ({
   address1: faker.address.streetAddress(),
   address2: faker.address.secondaryAddress(),
   city: faker.address.city(), 
-  state: faker.address.usState(),
-  country: "US", 
-  zip: faker.address.zip(), 
-  phone: faker.phoneNumber.phoneNumber(), 
+  state: 'OH',
+  zip: faker.address.zipCode(), 
+  phone: faker.phone.phoneNumberFormat(), 
   phoneType: "cell", 
-  phone2: faker.phoneNumber.phoneNumber(), 
+  phone2: faker.phone.phoneNumberFormat(), 
   phone2Type: "home", 
-  phone3: faker.phoneNumber.phoneNumber(), 
+  phone3: faker.phone.phoneNumberFormat(), 
   phone3Type: "work", 
   phone3Ext: "123",
-  fax: faker.phoneNumber.phoneNumber(), 
+  fax: faker.phone.phoneNumberFormat(), 
   image: faker.image.people()
   
 })

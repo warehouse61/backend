@@ -1,18 +1,18 @@
 
 exports.up = function(knex) {
     return knex.schema.createTable('admins', admins => {
-        admins.increments();
+        admins.increments('adminId');
         admins.integer('affiliateId')
                 .notNullable()
                 .unsigned()
-                .references('id')
+                .references('affiliateId')
                 .inTable('affiliates')
                 .onDelete('CASCADE')
                 .onUpdate('CASCADE')
         admins.integer('userId')
                 .notNullable()
                 .unsigned()
-                .references('id')
+                .references('userId')
                 .inTable('users')
                 .onDelete('CASCADE')
                 .onUpdate('CASCADE')

@@ -1,7 +1,7 @@
 
 exports.up = function(knex) {
     return knex.schema.createTable('affiliates', affiliates => {
-        affiliates.increments();
+        affiliates.increments('affiliateId');
         affiliates.string('name', 255).notNullable()
         affiliates.string('website', 255)
         affiliates.text('description')
